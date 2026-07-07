@@ -18,7 +18,7 @@ const tours = [
     highlight: true,
     badge: "Most Popular",
     badgeColor: "#C9A84C",
-    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Bosanska_piramida_sunca_01.jpg/800px-Bosanska_piramida_sunca_01.jpg",
+    image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600&q=80",
   },
   {
     name: "Tunnel Deep Dive",
@@ -35,7 +35,7 @@ const tours = [
     highlight: false,
     badge: "Expert-Led",
     badgeColor: "#6aaa6a",
-    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/Bosnian_Pyramids_Ravne_Tunnels.JPG/800px-Bosnian_Pyramids_Ravne_Tunnels.JPG",
+    image: "https://images.unsplash.com/photo-1551632811-561732d1e306?w=600&q=80",
   },
   {
     name: "Family Adventure",
@@ -52,7 +52,7 @@ const tours = [
     highlight: false,
     badge: "Kid Friendly",
     badgeColor: "#4a9aca",
-    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Visoko_Bosna_Pyramid.jpg/800px-Visoko_Bosna_Pyramid.jpg",
+    image: "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=600&q=80",
   },
   {
     name: "Full Day Discovery",
@@ -69,7 +69,7 @@ const tours = [
     highlight: false,
     badge: "Best Value",
     badgeColor: "#a86ca8",
-    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Bosanska_dolina_piramida_029.jpg/800px-Bosanska_dolina_piramida_029.jpg",
+    image: "https://images.unsplash.com/photo-1490682143684-14369e18dce8?w=600&q=80",
   },
 ];
 

@@ -15,7 +15,7 @@ export default function Hero() {
           className="absolute inset-0 bg-cover bg-center bg-no-repeat scale-105"
           style={{
             backgroundImage:
-              "url('https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Bosanska_piramida_sunca_01.jpg/1280px-Bosanska_piramida_sunca_01.jpg')",
+              "url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1920&q=85')",
             willChange: "transform",
           }}
         />

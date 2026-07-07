@@ -79,7 +79,7 @@ export default function About() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
           <div className="rounded-2xl overflow-hidden aspect-video relative">
             <div className="absolute inset-0 bg-cover bg-center"
-                 style={{ backgroundImage: "url('https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/Bosnian_Pyramids_Ravne_Tunnels.JPG/1280px-Bosnian_Pyramids_Ravne_Tunnels.JPG')" }} />
+                 style={{ backgroundImage: "url('https://images.unsplash.com/photo-1520962922320-2038eebab146?w=900&q=80')" }} />
             <div className="absolute inset-0 img-overlay" />
             <div className="absolute bottom-4 left-4">
               <span className="glass-tag">Excavation site, Visočica Hill</span>
