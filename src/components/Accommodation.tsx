@@ -27,7 +27,7 @@ interface Accom {
   amenities: string[];
   priceRange: string;
   bookingUrl: string;
-  image: string;
+  photos: [string, string, string, string];
   badge?: string;
   badgeColor?: string;
 }
@@ -46,7 +46,7 @@ const accommodations: Accom[] = [
     amenities: ["Free WiFi", "Balcony", "Garden", "Terrace", "Mountain view"],
     priceRange: "€30–€55 / night",
     bookingUrl: "https://www.booking.com/hotel/ba/rooms-pyramid-of-sun.html",
-    image: "/images/pyramids/pyramid-sun.jpg",
+    photos: ["/images/pyramids/pyramid-sun.jpg", "/images/pyramids/pyramid-hill.jpg", "/images/pyramids/ravne-tunnel-k2.jpg", "/images/pyramids/visoko-town.jpg"],
     badge: "Exceptional 9.6",
     badgeColor: "#4a9aca",
   },
@@ -63,7 +63,7 @@ const accommodations: Accom[] = [
     amenities: ["Free WiFi", "Terrace", "Parking", "Pyramid view", "Air conditioning"],
     priceRange: "€40–€75 / night",
     bookingUrl: "https://www.booking.com/hotel/ba/vi-apartments-bih-visoko.html",
-    image: "/images/pyramids/pyramid-from-love.jpg",
+    photos: ["/images/pyramids/pyramid-from-love.jpg", "/images/pyramids/pyramid-sun.jpg", "/images/pyramids/pyramid-stones.jpg", "/images/pyramids/pyramid-hill.jpg"],
     badge: "Pyramid View",
     badgeColor: "#C9A84C",
   },
@@ -80,7 +80,7 @@ const accommodations: Accom[] = [
     amenities: ["Free WiFi", "Parking", "Air conditioning", "Kitchen", "Supermarket nearby"],
     priceRange: "€40–€70 / night",
     bookingUrl: "https://www.booking.com/hotel/ba/luxury-pyramid-apartments-visoko.html",
-    image: "/images/pyramids/pyramid-hill.jpg",
+    photos: ["/images/pyramids/pyramid-hill.jpg", "/images/pyramids/ravne-interior.jpg", "/images/pyramids/pyramid-from-love.jpg", "/images/pyramids/visoko-town.jpg"],
     badge: "Exceptional 9.4",
     badgeColor: "#4a9aca",
   },
@@ -97,7 +97,7 @@ const accommodations: Accom[] = [
     amenities: ["Free WiFi", "Private pool", "Fireplace", "Parking", "Mountain view"],
     priceRange: "€50–€90 / night",
     bookingUrl: "https://www.booking.com/hotel/ba/pyramid.html",
-    image: "/images/pyramids/pyramid-stones.jpg",
+    photos: ["/images/pyramids/pyramid-stones.jpg", "/images/pyramids/ravne-passage.jpg", "/images/pyramids/pyramid-sun.jpg", "/images/pyramids/pyramid-from-love.jpg"],
     badge: "Private Pool",
     badgeColor: "#a86ca8",
   },
@@ -195,39 +195,60 @@ export default function Accommodation() {
         </div>
 
         {/* Cards grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {filtered.map((a) => (
             <article
               key={a.name}
               className="card-premium rounded-2xl overflow-hidden flex flex-col group"
             >
-              {/* Image */}
-              <div className="relative overflow-hidden" style={{ aspectRatio: "16/10" }}>
-                <div
-                  className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110"
-                  style={{ backgroundImage: `url('${a.image}')` }}
-                />
-                <div className="absolute inset-0 img-overlay" />
+              {/* 2×2 photo collage — each photo links to Booking.com */}
+              <a
+                href={a.bookingUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block relative overflow-hidden"
+                style={{ aspectRatio: "16/10" }}
+                aria-label={`View ${a.name} on Booking.com`}
+              >
+                <div className="grid grid-cols-2 grid-rows-2 w-full h-full gap-0.5">
+                  {a.photos.map((src, i) => (
+                    <div
+                      key={i}
+                      className="relative overflow-hidden bg-stone-800 transition-transform duration-500 hover:scale-105"
+                      style={{ backgroundImage: `url('${src}')`, backgroundSize: "cover", backgroundPosition: "center" }}
+                    />
+                  ))}
+                </div>
+
+                {/* Dark overlay on hover */}
+                <div className="absolute inset-0 bg-stone-950/0 group-hover:bg-stone-950/20 transition-all duration-300 pointer-events-none" />
 
                 {/* Top badges */}
-                <div className="absolute top-3 left-3 flex flex-wrap gap-1.5">
-                  <span className="glass-tag">{a.type}</span>
+                <div className="absolute top-3 left-3 flex flex-wrap gap-1.5 pointer-events-none">
                   {a.badge && (
                     <span className="text-[10px] font-bold px-2.5 py-1 rounded-full"
-                          style={{ background: `${a.badgeColor}28`, border: `1px solid ${a.badgeColor}60`, color: a.badgeColor }}>
+                          style={{ background: `${a.badgeColor}28`, border: `1px solid ${a.badgeColor}60`, color: a.badgeColor, backdropFilter: "blur(8px)" }}>
                       {a.badge}
                     </span>
                   )}
                 </div>
 
                 {/* Price */}
-                <div className="absolute bottom-3 right-3">
+                <div className="absolute bottom-3 right-3 pointer-events-none">
                   <span className="text-xs font-semibold px-2.5 py-1.5 rounded-full"
-                        style={{ background: "rgba(201,168,76,0.22)", border: "1px solid rgba(201,168,76,0.45)", color: "#E8C97A" }}>
+                        style={{ background: "rgba(201,168,76,0.22)", border: "1px solid rgba(201,168,76,0.45)", color: "#E8C97A", backdropFilter: "blur(8px)" }}>
                     {a.priceRange}
                   </span>
                 </div>
-              </div>
+
+                {/* "See photos" hint */}
+                <div className="absolute top-3 right-3 pointer-events-none">
+                  <span className="text-[10px] font-medium px-2 py-1 rounded-lg flex items-center gap-1"
+                        style={{ background: "rgba(0,0,0,0.55)", color: "#d1ccc5", backdropFilter: "blur(8px)" }}>
+                    <ExternalLink className="w-2.5 h-2.5" /> Booking.com
+                  </span>
+                </div>
+              </a>
 
               {/* Content */}
               <div className="p-5 flex flex-col flex-1">

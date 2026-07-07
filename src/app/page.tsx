@@ -9,7 +9,6 @@ import MapSection from "@/components/MapSection";
 import Tours from "@/components/Tours";
 import Gallery from "@/components/Gallery";
 import FAQ from "@/components/FAQ";
-import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 
 export default function Home() {
@@ -26,7 +25,6 @@ export default function Home() {
       <Tours />
       <Gallery />
       <FAQ />
-      <Contact />
       <Footer />
     </main>
   );
