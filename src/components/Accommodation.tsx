@@ -201,7 +201,7 @@ export default function Accommodation() {
               key={a.name}
               className="card-premium rounded-2xl overflow-hidden flex flex-col group"
             >
-              {/* 2×2 photo collage — each photo links to Booking.com */}
+              {/* Single photo linking to Booking.com */}
               <a
                 href={a.bookingUrl}
                 target="_blank"
@@ -210,18 +210,13 @@ export default function Accommodation() {
                 style={{ aspectRatio: "16/10" }}
                 aria-label={`View ${a.name} on Booking.com`}
               >
-                <div className="grid grid-cols-2 grid-rows-2 w-full h-full gap-0.5">
-                  {a.photos.map((src, i) => (
-                    <div
-                      key={i}
-                      className="relative overflow-hidden bg-stone-800 transition-transform duration-500 hover:scale-105"
-                      style={{ backgroundImage: `url('${src}')`, backgroundSize: "cover", backgroundPosition: "center" }}
-                    />
-                  ))}
-                </div>
+                <div
+                  className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105"
+                  style={{ backgroundImage: `url('${a.photos[0]}')` }}
+                />
 
                 {/* Dark overlay on hover */}
-                <div className="absolute inset-0 bg-stone-950/0 group-hover:bg-stone-950/20 transition-all duration-300 pointer-events-none" />
+                <div className="absolute inset-0 bg-stone-950/0 group-hover:bg-stone-950/25 transition-all duration-300 pointer-events-none" />
 
                 {/* Top badges */}
                 <div className="absolute top-3 left-3 flex flex-wrap gap-1.5 pointer-events-none">
