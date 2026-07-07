@@ -19,6 +19,7 @@ const tours = [
     badge: "Most Popular",
     badgeColor: "#C9A84C",
     image: "/images/pyramids/pyramid-sun.jpg",
+    bookingUrl: "https://www.getyourguide.com/visoko-l97862/tours-tc1/",
   },
   {
     name: "Tunnel Deep Dive",
@@ -36,6 +37,7 @@ const tours = [
     badge: "Expert-Led",
     badgeColor: "#6aaa6a",
     image: "/images/pyramids/ravne-passage.jpg",
+    bookingUrl: "https://www.getyourguide.com/visoko-l97862/tours-tc1/",
   },
   {
     name: "Family Adventure",
@@ -53,6 +55,7 @@ const tours = [
     badge: "Kid Friendly",
     badgeColor: "#4a9aca",
     image: "/images/pyramids/pyramid-hill.jpg",
+    bookingUrl: "https://www.getyourguide.com/visoko-l97862/tours-tc1/",
   },
   {
     name: "Full Day Discovery",
@@ -70,6 +73,7 @@ const tours = [
     badge: "Best Value",
     badgeColor: "#a86ca8",
     image: "/images/pyramids/pyramid-from-love.jpg",
+    bookingUrl: "https://www.getyourguide.com/visoko-l97862/tours-tc1/",
   },
 ];
 
@@ -155,7 +159,9 @@ export default function Tours() {
                 </ul>
 
                 <a
-                  href="#contact"
+                  href={tour.bookingUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="btn-gold flex items-center justify-center gap-2 py-3 rounded-xl text-sm"
                 >
                   <span>Book This Tour</span>
