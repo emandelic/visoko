@@ -15,7 +15,7 @@ export default function Hero() {
           className="absolute inset-0 bg-cover bg-center bg-no-repeat scale-105"
           style={{
             backgroundImage:
-              "url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1920&q=85')",
+              "url('/images/pyramids/pyramid-sun.jpg')",
             willChange: "transform",
           }}
         />

@@ -18,7 +18,7 @@ const tours = [
     highlight: true,
     badge: "Most Popular",
     badgeColor: "#C9A84C",
-    image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600&q=80",
+    image: "/images/pyramids/pyramid-sun.jpg",
   },
   {
     name: "Tunnel Deep Dive",
@@ -35,7 +35,7 @@ const tours = [
     highlight: false,
     badge: "Expert-Led",
     badgeColor: "#6aaa6a",
-    image: "https://images.unsplash.com/photo-1551632811-561732d1e306?w=600&q=80",
+    image: "/images/pyramids/ravne-passage.jpg",
   },
   {
     name: "Family Adventure",
@@ -52,7 +52,7 @@ const tours = [
     highlight: false,
     badge: "Kid Friendly",
     badgeColor: "#4a9aca",
-    image: "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=600&q=80",
+    image: "/images/pyramids/pyramid-hill.jpg",
   },
   {
     name: "Full Day Discovery",
@@ -69,7 +69,7 @@ const tours = [
     highlight: false,
     badge: "Best Value",
     badgeColor: "#a86ca8",
-    image: "https://images.unsplash.com/photo-1490682143684-14369e18dce8?w=600&q=80",
+    image: "/images/pyramids/pyramid-from-love.jpg",
   },
 ];
 

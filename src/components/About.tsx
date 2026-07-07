@@ -79,7 +79,7 @@ export default function About() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
           <div className="rounded-2xl overflow-hidden aspect-video relative">
             <div className="absolute inset-0 bg-cover bg-center"
-                 style={{ backgroundImage: "url('https://images.unsplash.com/photo-1520962922320-2038eebab146?w=900&q=80')" }} />
+                 style={{ backgroundImage: "url('/images/pyramids/ravne-tunnel-k2.jpg')" }} />
             <div className="absolute inset-0 img-overlay" />
             <div className="absolute bottom-4 left-4">
               <span className="glass-tag">Excavation site, Visočica Hill</span>
