@@ -19,7 +19,7 @@ const tours = [
     badge: "Most Popular",
     badgeColor: "#C9A84C",
     image: "/images/pyramids/pyramid-sun.jpg",
-    bookingUrl: "https://www.getyourguide.com/visoko-l97862/tours-tc1/",
+    bookingUrl: "https://www.getyourguide.com/visoko-l147748/bosnian-pyramids-tour-t654821/",
   },
   {
     name: "Tunnel Deep Dive",
@@ -37,7 +37,7 @@ const tours = [
     badge: "Expert-Led",
     badgeColor: "#6aaa6a",
     image: "/images/pyramids/ravne-passage.jpg",
-    bookingUrl: "https://www.getyourguide.com/visoko-l97862/tours-tc1/",
+    bookingUrl: "https://www.getyourguide.com/bosnian-pyramid-of-the-sun-l147749/",
   },
   {
     name: "Family Adventure",
@@ -55,7 +55,7 @@ const tours = [
     badge: "Kid Friendly",
     badgeColor: "#4a9aca",
     image: "/images/pyramids/pyramid-hill.jpg",
-    bookingUrl: "https://www.getyourguide.com/visoko-l97862/tours-tc1/",
+    bookingUrl: "https://www.getyourguide.com/sarajevo-l2281/sarajevo-bosnian-pyramids-mystery-tour-t76040/",
   },
   {
     name: "Full Day Discovery",
@@ -73,7 +73,7 @@ const tours = [
     badge: "Best Value",
     badgeColor: "#a86ca8",
     image: "/images/pyramids/pyramid-from-love.jpg",
-    bookingUrl: "https://www.getyourguide.com/visoko-l97862/tours-tc1/",
+    bookingUrl: "https://www.getyourguide.com/sarajevo-l2281/pyramids-in-visoko-bosnia-and-herzegovina-the-tour-t648948/",
   },
 ];
 
